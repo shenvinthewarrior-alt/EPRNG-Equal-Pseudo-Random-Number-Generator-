@@ -72,7 +72,7 @@ function prng_roll(_rng)
 					else
 					{
 						//all of the range will put to the last range 
-						//if the Chosen range can Share equally
+						//if the Chosen range can't Share equally
 						if (l == _rng.count-1)
 						{_rng.prng_range[l] = 100-(round(100/(_rng.count-1))*(_rng.count-2))}
 						//Otherwise same share
