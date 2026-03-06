@@ -75,9 +75,17 @@ function prng_roll(_rng)
 						//if the Chosen range can't Share equally
 						if (l == _rng.count-1)
 						{_rng.prng_range[l] = 100-(round(100/(_rng.count-1))*(_rng.count-2))}
-						//Otherwise same share
+						//Otherwise
 						else
-						{_rng.prng_range[l] = round(100/(_rng.count-1))}
+						{
+							// if random hit last range, Check which one will carry on last range's legacy.
+							if (i = _rng.count-1){
+							if (_rng.prng_range[l] == 0)
+							{_rng.prng_range[l] = _rng.prng_range[_rng.count-1]}}
+							//Same Share
+							else
+							{_rng.prng_range[l] = round(100/(_rng.count-1))}
+						}
 					}
 				}
 			}
