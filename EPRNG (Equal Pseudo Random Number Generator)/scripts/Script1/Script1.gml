@@ -78,10 +78,15 @@ function prng_roll(_rng)
 						//Otherwise
 						else
 						{
-							// if random hit last range, Check which one will carry on last range's legacy.
+							// if random hit last range, Share some last range's legacy as it can.
 							if (i = _rng.count-1){
-							if (_rng.prng_range[l] == 0)
-							{_rng.prng_range[l] = _rng.prng_range[_rng.count-1]}}
+								
+								if (_rng.prng_range[_rng.count-1] > 0)
+								{
+									_rng.prng_range[l] += 1
+									_rng.prng_range[_rng.count-1] -= 1
+								}
+							}
 							//Same Share
 							else
 							{_rng.prng_range[l] = round(100/(_rng.count-1))}
