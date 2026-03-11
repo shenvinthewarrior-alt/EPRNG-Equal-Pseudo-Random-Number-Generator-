@@ -6,3 +6,6 @@ draw_text(x, y+96, "Power: " + string(rng.power));
 draw_text(x,y+128,"Roll: " + string(rng.Roll))
 draw_text(x,y+160,"Result: " + string(good) );
 
+
+
+draw_text(x,y+320,rng.take_value)
