@@ -1,4 +1,4 @@
-function prng_create(_count,_power)
+function Equal_prng_create(_count,_power)
 {
 	//Set Up
     var rng = {};
@@ -28,7 +28,7 @@ function prng_create(_count,_power)
     return rng;
 }
 
-function prng_roll(_rng)
+function Equal_prng_roll(_rng)
 {
 	//Rng
 	randomise()
@@ -91,4 +91,31 @@ function prng_roll(_rng)
 	}
 	//Don't work
 	return false;
+}
+
+
+function OG_prng_create(_base,_power)
+{
+	var rng = {};
+	rng.base = _base;
+    rng.power = _power;
+	rng.Roll = 0;
+	rng.take_value = 0;
+	return rng;
+}
+
+function OG_prng_roll(_rng)
+{
+	randomise()
+	_rng.Roll = 100//irandom_range(1,100)
+	if (_rng.base >= _rng.Roll - (_rng.take_value*_rng.power))
+	{
+		_rng.take_value = 0;
+		return true;
+	}
+	else
+	{
+		_rng.take_value++;
+		return false;
+	}
 }

@@ -21,6 +21,7 @@
   },
   "name":"EPRNG (Equal Pseudo Random Number Generator)",
   "resources":[
+    {"id":{"name":"Object1_1","path":"objects/Object1_1/Object1_1.yy",},},
     {"id":{"name":"Object1","path":"objects/Object1/Object1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},

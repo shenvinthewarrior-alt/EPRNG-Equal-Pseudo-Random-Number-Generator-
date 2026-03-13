@@ -1,4 +1,4 @@
 //Create
 randomise()
-rng = prng_create(5,1) // 5
+rng = OG_prng_create(0,10)
 good = 0;

@@ -1,6 +1,5 @@
 //Step
-
 if (keyboard_check_pressed(ord("M")))
 {
-    good = OG_prng_roll(rng);
+    good = Equal_prng_roll(rng);
 }
